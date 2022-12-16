@@ -29,7 +29,7 @@ int MinValue(randomNumList) {
             minNum = currentNum;
         }
     }
-    return minNum
+    return minNum;
 }
 
 int main() {
@@ -43,14 +43,10 @@ int main() {
     // Initializing variables
     // counter
     int counter = 0;
-    // trueMin
-    int trueMin;
     // randomNumList
     std::array<int, 10> randomNumList;
 
     for (int counter = 1; counter <= 8; counter = counter + 1) {
-        // initializing randomNum
-        int randomNum;
         // random number code
         // initializing random seed
         std::random_device rseed;
@@ -62,7 +58,8 @@ int main() {
 
         // making random number variable
         // randomNumber = (rand() % RANGE + 1) + 0;
-        randomNum = idist(rgen);
+        // initializing randomNum
+        int randomNum = idist(rgen);
 
         // adding randomNum to the array
         randomNumList[counter] = randomNum;
@@ -74,8 +71,7 @@ int main() {
     }
 
     // Calling MinValue()
-    // ?
-    trueMin = MinValue(randomNumList);
+    int trueMin = MinValue(randomNumList);
 
     // MinValue(randomNumList)
 
